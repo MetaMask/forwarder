@@ -1,9 +1,12 @@
 
 setInterval(function() {
   if (typeof window.web3 !== "undefined") {
-   
+    if (window.web3.eth.accounts[0]) {
+      window.location.reload();
+    }
+    else{
       window.addEventListener("message", receiveMessage, false);
-   
+    }
   }
   else{
     window.location.reload();
