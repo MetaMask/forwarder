@@ -1,13 +1,7 @@
 if (typeof window.web3 !== "undefined") {
-        var account = web3.eth.accounts[0];
-      var accountInterval = setInterval(function() {
-        if (web3.eth.accounts[0] !== account) {
-          account = web3.eth.accounts[0];
-          window.location.reload()
-        }
-      }, 100);
-        
-  
+  if (window.web3.eth.accounts[0]) {
+    window.location.reload()
+  }
  
   window.addEventListener("message", receiveMessage, false)
   } else {
