@@ -2,8 +2,9 @@
  if (typeof window.web3 !== "undefined") {
   window.addEventListener('onboardingcomplete',function(event) {
 
+    var string = window.location.href
     if( string.includes('fwd.metamask.io/')){
-      var string = window.location.href
+      
       var res = string.substring(17);
       window.open(res);
 
