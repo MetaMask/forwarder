@@ -15,9 +15,7 @@
     if( string.includes('fwd.metamask.io/')){
       
       var res = string.substring(17);
-      window.open(res);
-
-      window.close()
+      console.log(res)
     
     }
   }
