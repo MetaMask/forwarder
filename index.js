@@ -1,5 +1,8 @@
-
- if (typeof window.web3 !== "undefined") {
+if (typeof window.web3 !== "undefined") {
+  if (!(window.web3.currentProvider.isMetaMask)){
+    window.location.reload()
+  }
+ 
   window.addEventListener("message", receiveMessage, false)
   } else {
     window.location.reload()
@@ -14,8 +17,9 @@
     var string = window.location.href
     if( string.includes('fwd.metamask.io/')){
       
-      var res = string.substring(17);
-      console.log(res)
+      var res = string.substring(24);
+      window.open(res)
+     window.close()
     
     }
   }
@@ -23,3 +27,4 @@
   // event.source is popup
   // event.data is "hi there yourself!  the secret response is: rheeeeet!"
 }
+
