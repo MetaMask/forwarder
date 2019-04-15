@@ -8,6 +8,9 @@ setInterval(function() {
       window.addEventListener("message", receiveMessage, false);
     }
   }
+  else{
+    window.location.reload();
+  }
 }, 3000);
 
 
