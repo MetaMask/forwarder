@@ -20,7 +20,7 @@
   ],
   "scripts": {
     "start": "static-server . --port 9010",
-    "deploy": "deploy.bash"
+    "deploy": "./deploy.sh"
   },
   "devDependencies": {
     "static-server": "^2.2.1"
