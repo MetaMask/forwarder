@@ -19,7 +19,7 @@
     "/dist"
   ],
   "scripts": {
-    "start": "static-server . --port 9010",
+    "start": "static-server ./dist --port 9010",
     "deploy": "./deploy.sh"
   },
   "devDependencies": {
